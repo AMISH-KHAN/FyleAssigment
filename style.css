@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.padding{
+    padding:  100px 12rem ;
+    /* height: 100vh; */
+
+}
+
+.hero{
+    display: flex;
+    /* margin: 0 auto; */
+    justify-content: space-between;
+    /* flex-wrap: wrap-reverse; */
+    /* height: 100%; */
+}
+
+.hero-text{
+    margin:143px 0 ;
+    width: 50rem;
+}
+
+.small-text{
+    font-size: 30px;
+    font-family: Cormorant SC;
+    font-weight: bold;
+    color: #FF3147;
+    margin-bottom: 1.5rem;
+}
+
+.main-text{
+    font-size: 60px;
+    font-family: Cormorant SC;
+    line-height: 60px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+
+
+
+
+.para-text{
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 30px;
+    margin-bottom: 2rem;
+    width: 80%;
+}
+.hero-text>button{
+    background-color: #FF3147;
+    color: white;
+    font-family: Poppins;
+    font-weight: bold;
+    width: 160px;
+    height: 50px;
+    border: none;
+    border-radius: 2px;
+}
+
+.hero-img{
+    width: 487px;
+height:650px;
+}
+
+#service{
+    background-color: #FAFAFA;
+    overflow: hidden;
+    
+}
+
+.service-main-text{
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: bold;
+
+}
+
+.service-para{
+    margin-left: 4rem;
+}
+
+.carousel{
+    position: relative;
+    right: -221px;
+}
+
+.item>img{
+    height: 430px;
+    width: 100%;
+}
+
+.item{
+    position: relative;
+}
+
+  .owl-carousel .owl-dots .owl-dot span,.owl-carousel .owl-dots .owl-dot.active span ,.owl-carousel .owl-dots .owl-dot:hover span{
+    background: #ff0000; /* Default color for dots */
+    width: 6px; /* Default width for dots */
+    height: 6px; /* Default height for dots */
+    display: inline-block; /* Ensures dots are inline */
+    border-radius: 50%; /* Makes the dots circular */
+    position: relative; /* Required for the pseudo-element */
+    transition: all 0.3s; /* Smooth transition for hover effects */
+    margin-left: 16px;
+  }
+
+  .owl-carousel .owl-dots .owl-dot.active span::before,
+  .owl-carousel .owl-dots .owl-dot:hover span::before {
+    content: ''; /* No content inside the pseudo-element */
+    position: absolute; /* Position relative to the span */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the circle */
+    width: 24px; /* Diameter of the circle */
+    height: 24px; /* Diameter of the circle */
+    border: 2px solid #ff0000; /* Border color and thickness */
+    border-radius: 50%; /* Makes the border circular */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    /* background: #ff0000; */
+  }
+  .owl-theme .owl-nav.disabled+.owl-dots {
+    margin-top: 10px;
+    text-align: end;
+}
+
+.item-back{
+    width: 100%;
+    height: 430px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    background-color: #FF3147;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1;
+}
+
+.item-back-display{
+}
+
+.item-back-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:0.5rem;
+    color: #FAFAFA;
+    font-family: Cormorant SC;;
+
+}
+
+.item-back-content>a{
+       text-align: end;
+       font-size: 13px;
+display: flex;
+flex-direction: row-reverse;
+justify-content: center;
+align-items: center;
+gap: 1rem;
+padding: 6px 8px; 
+background-color: #FAFAFA;
+color: #FF3147;
+border: none;
+border-radius: 2px;
+text-decoration: none;
+font-weight: bolder;
+}
+
+.item-back-content>p{
+    text-align: center;
+    padding: 0 1rem;
+    font-size: 13px;
+}
+
+.strength{
+    width: 15rem;
+}
+
+
+.strength>img{
+    width: 3rem;
+    height: 3rem;
+}
+
+.strength>h6{
+    font-family: popins;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.strength>p{
+    font-family: popins;
+    font-size: 15px;
+}
+
+.project-desc{
+    background: #F6F6F6;
+    width: 370px;
+    height: 189px;
+    padding: 3rem 2rem;
+    cursor: pointer;
+}
+
+.focus-style{
+    background-color: #ff0000;
+    color: #F6F6F6;
+}
+
+@media only screen and (max-width: 1010px) {
+    .padding{
+        padding: 100px 4rem;
+    }
+  }
+@media only screen and (max-width: 850px) {
+    .padding {
+        padding: 100px 1rem;
+    }
+
+    .hero-img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        filter: brightness(70%);
+    }
+    .hero-text {
+        margin: 33px auto;
+        width: 80%;
+        color: white;
+    }
+    .small-text {
+        font-size: 19px;
+        margin-bottom: 0.5rem;
+    }
+    .main-text{
+        font-size: 34px;
+    line-height: 36px;
+    margin-bottom: 1rem
+    }
+    .para-text {
+        font-size: 12px;
+        line-height: 21px;
+        
+    }
+    .service-content{
+        flex-direction: column;
+    }
+    .service-para {
+        margin-left: 0rem;
+    }
+    .carousel{
+        right: 0;
+    }
+  }
