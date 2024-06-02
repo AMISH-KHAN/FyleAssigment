@@ -1,10 +1,12 @@
 $(document).ready(function () {
-    
-    $('.owl-carousel').owlCarousel({
+  var owl = $('.owl-carousel');
+    owl.owlCarousel({
         loop: true,
         center: true,
         rtl:true,
-        margin:10,
+      margin: 10,
+      dots: false,
+      dotsData:true,
       nav: false,
       autoplay:true,
       autoplayTimeout:1000,
@@ -21,6 +23,29 @@ $(document).ready(function () {
             }
         }
     })
+  
+  
+    $('.custom-dots button').click(function() {
+      var dotIndex = $(this).data('dot');
+      owl.trigger('to.owl.carousel', [dotIndex * 3, 300]);
+      $('.custom-dots button').removeClass('active');
+      $(this).addClass('active');
+    });
+
+    function updateActiveDot(dotIndex) {
+      $('.custom-dots button').removeClass('active');
+      $('.custom-dots button[data-dot="' + dotIndex + '"]').addClass('active');
+  }
+  owl.on('changed.owl.carousel', function(event) {
+    var clonesCount = event.relatedTarget._clones.length / 2;
+    var currentIndex = (event.item.index - clonesCount + event.item.count) % event.item.count;
+    var buttonIndex = Math.floor(currentIndex / 3); // Each button controls a group of 3 items
+    updateActiveDot(buttonIndex);
+  });
+    // Set the first dot as active
+  $('.custom-dots button').first().addClass('active');
+  
+
     $(this).find(".item-back").remove();
     $(".item").mouseenter(function(){
         // Append the item-back div when hovering over an item
@@ -43,14 +68,53 @@ $(document).ready(function () {
         $(this).focus();
       });
 
-      // Handle the focus event
-      $(".project-desc").focus(function(){
+  // Handle the focus event
+      const arr=["image.png","image2.jpg","image3.jpg"]
+      $(".project-desc").click(function(){
+        $(".project-desc").removeClass("focus-style");
         $(this).addClass("focus-style");
-      }).blur(function(){
-        $(this).removeClass("focus-style");
-      });
+        $(".project-image").attr("src",`./public/${arr[this.id]}`)
+      })
 
-      // Also handle click to ensure the element gets focused
-      
+  $(`input[type="email"]`).focus(function () {
+    $(".emailLable").css({
+          "top":"-0.5rem"
+    })
+  }).blur(function () {
+   
+    if ($(this).val() === "") {
+      $(".emailLable").css({
+            "top":"1rem"
+          })
+          
+        }
+      })
+
+  $(`input[name="firstName"]`).focus(function () {
+    $(".fnameLable").css({
+          "top":"-0.5rem"
+    })
+  }).blur(function () {
+   
+    if ($(this).val() === "") {
+      $(".fnameLable").css({
+            "top":"1rem"
+          })
+          
+        }
+      })
+  $(`input[name="lastName"]`).focus(function () {
+    $(".lnameLable").css({
+          "top":"-0.5rem"
+    })
+  }).blur(function () {
+   
+    if ($(this).val() === "") {
+      $(".lnameLable").css({
+            "top":"1rem"
+          })
+          
+        }
+      })
        
 })

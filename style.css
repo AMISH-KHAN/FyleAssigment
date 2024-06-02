@@ -37,6 +37,7 @@
     line-height: 60px;
     text-transform: uppercase;
     margin-bottom: 2rem;
+    font-weight: 900;
 }
 
 
@@ -96,9 +97,25 @@ height:650px;
 .item{
     position: relative;
 }
+.custom-dots {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    justify-content: start;
+    margin-left: 13rem;
+  }
+  .custom-dots .dots {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0 5px;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+  }
 
-  .owl-carousel .owl-dots .owl-dot span,.owl-carousel .owl-dots .owl-dot.active span ,.owl-carousel .owl-dots .owl-dot:hover span{
-    background: #ff0000; /* Default color for dots */
+  .custom-dots .dots span{
+    background: #FF3147; /* Default color for dots */
     width: 6px; /* Default width for dots */
     height: 6px; /* Default height for dots */
     display: inline-block; /* Ensures dots are inline */
@@ -108,8 +125,8 @@ height:650px;
     margin-left: 16px;
   }
 
-  .owl-carousel .owl-dots .owl-dot.active span::before,
-  .owl-carousel .owl-dots .owl-dot:hover span::before {
+  .custom-dots .dots.active span::before,
+  .custom-dots .dots:hover span::before {
     content: ''; /* No content inside the pseudo-element */
     position: absolute; /* Position relative to the span */
     top: 50%; /* Center vertically */
@@ -117,15 +134,11 @@ height:650px;
     transform: translate(-50%, -50%); /* Center the circle */
     width: 24px; /* Diameter of the circle */
     height: 24px; /* Diameter of the circle */
-    border: 2px solid #ff0000; /* Border color and thickness */
+    border: 2px solid #FF3147; /* Border color and thickness */
     border-radius: 50%; /* Makes the border circular */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    /* background: #ff0000; */
+    /* background: #FF3147; */
   }
-  .owl-theme .owl-nav.disabled+.owl-dots {
-    margin-top: 10px;
-    text-align: end;
-}
 
 .item-back{
     width: 100%;
@@ -189,29 +202,199 @@ font-weight: bolder;
 }
 
 .strength>h6{
-    font-family: popins;
+    font-family: poppins;
     font-size: 20px;
     font-weight: bolder;
 }
 
 .strength>p{
-    font-family: popins;
+    font-family: poppins;
     font-size: 15px;
 }
 
 .project-desc{
     background: #F6F6F6;
-    width: 370px;
-    height: 189px;
+    width: 26rem;
+    height: 10rem;
     padding: 3rem 2rem;
     cursor: pointer;
+    font-family: poppins;
 }
 
-.focus-style{
-    background-color: #ff0000;
+.focus-style {
+    background-color: #FF3147;
     color: #F6F6F6;
 }
 
+.project-image{
+    width: 30rem;
+    height: 30rem;
+}
+
+.growth{
+    background-color: #FAFAFA;
+}
+
+.growth-margin{
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 3rem;
+    height: 233px;
+    font-family: poppins;
+    background-color: white;
+}
+
+.growth-margin:hover{
+    box-shadow: 2px 2px 15px #b6b6b6fa;
+
+}
+.growth-margin>span{
+    font-size: 3rem;
+}
+
+.mini{
+    font-size:45px;
+}
+
+.feedback-quote{
+    width: 35rem;
+    margin: auto;
+    font-size: 20px;
+}
+
+.feedback-quote>img{
+    position: relative;
+    top: 1.5rem;
+    left: -14px;
+    z-index: -1;
+    width: 3rem;
+    height: 2rem;
+
+}
+
+.name{
+    color: #FF3147;
+    font-size: 22px;
+    font-weight: 900;
+    font-family: poppins;
+}
+
+.occupation{
+    color: #bfbfbf
+}
+
+footer{
+    background-color: #FF3147;
+
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .modal-body{
+    padding: 2rem;
+  }
+
+  .modal-title{
+    font-weight: 900;
+    margin-bottom: 2rem;
+  }
+
+  .contactName{
+    display: flex;
+    gap: 1rem;
+    position: relative;
+  }
+
+  .contactName div{
+    position: relative;
+  }
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #6F718F99;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    margin-bottom: 2rem;
+    color: #2D3142;
+    font-size:14px ;
+    font-family: poppins;
+    font-weight: bolder;
+
+  }
+  
+  input[type="text"]:hover,
+  input[type="email"]:hover,
+  input[type="text"]:focus,
+  input[type="email"]:focus{
+    outline: none;
+  }
+
+  input[type="text"]::placeholder,
+  input[type="email"]::placeholder{
+    color: #6F718F99;
+    font-size: 12px;
+  }
+  .form-check-input:checked{
+    background-color: #FF3366;
+    border: #FF3366;
+  }
+
+  .form-check-input:focus{
+    border:2px solid #FF3366;
+    box-shadow: none;
+  }
+
+  .form-check-label{
+    display: block;
+    margin-bottom: 5px;
+    color: #616678;
+    opacity: 90%;
+  }
+
+  .submit,.submit:hover,.submit:active{
+    width: 100%;
+    margin: .5rem 0;
+    background-color: #FF3366!important;
+    border: none;
+    outline: none;
+  }
+
+  .emailLable,.fnameLable,.lnameLable{
+    transition: top 0.3s ease;
+    position: absolute;
+    top: 1rem;
+    color: #6F718F99;
+    left: .5rem;
+    font-size: 12px;
+    font-weight:bold;
+    font-family: poppins;
+  }
+ 
 @media only screen and (max-width: 1010px) {
     .padding{
         padding: 100px 4rem;
@@ -258,5 +441,34 @@ font-weight: bolder;
     }
     .carousel{
         right: 0;
+    }
+    .custom-dots {
+       
+        justify-content: center;
+        margin: 2rem 0;
+    }
+    .project{
+        flex-direction: column;
+
+    }
+    .project-image{
+        width: 100%;
+        height: 20rem;
+    }
+    .project-desc{
+        width: 100%;
+        padding: 2rem;
+
+    }
+    .project-desc>p{
+        font-size: 15px;
+        line-height: 16px;
+    }
+.feedback-quote {
+    width: 100%;
+    font-size: 13px;
+}
+    footer{
+        padding: 13px 1rem !important;
     }
   }
