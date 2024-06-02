@@ -236,14 +236,14 @@ font-weight: bolder;
 }
 
 .growth-margin{
-    width: 270px;
+    width: 238px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
     padding: 1rem 3rem;
-    height: 233px;
+    height: 238px;
     font-family: poppins;
     background-color: white;
 }
