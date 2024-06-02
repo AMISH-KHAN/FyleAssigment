@@ -73,7 +73,7 @@ $(document).ready(function () {
       $(".project-desc").click(function(){
         $(".project-desc").removeClass("focus-style");
         $(this).addClass("focus-style");
-        $(".project-image").attr("src",`./public/${arr[this.id]}`)
+        $(".project-image").attr("src",`./Public/${arr[this.id]}`)
       })
 
   $(`input[type="email"]`).focus(function () {
@@ -119,7 +119,7 @@ $(document).ready(function () {
        
   $("#form").on('submit', function (e) {
     // e.preventDefault();
-
+    
     e.target.reset()
   })
 })
