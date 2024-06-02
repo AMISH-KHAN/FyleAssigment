@@ -1,3 +1,9 @@
+:root {
+    --primary-color: #FF3147;
+
+    
+  }
+
 *{
     margin: 0;
     padding: 0;
@@ -27,7 +33,7 @@
     font-size: 30px;
     font-family: Cormorant SC;
     font-weight: bold;
-    color: #FF3147;
+    color: var(--primary-color);
     margin-bottom: 1.5rem;
 }
 
@@ -52,7 +58,7 @@
     width: 80%;
 }
 .hero-text>button{
-    background-color: #FF3147;
+    background-color: var(--primary-color);
     color: white;
     font-family: Poppins;
     font-weight: bold;
@@ -115,7 +121,7 @@ height:650px;
   }
 
   .custom-dots .dots span{
-    background: #FF3147; /* Default color for dots */
+    background: var(--primary-color); /* Default color for dots */
     width: 6px; /* Default width for dots */
     height: 6px; /* Default height for dots */
     display: inline-block; /* Ensures dots are inline */
@@ -134,10 +140,10 @@ height:650px;
     transform: translate(-50%, -50%); /* Center the circle */
     width: 24px; /* Diameter of the circle */
     height: 24px; /* Diameter of the circle */
-    border: 2px solid #FF3147; /* Border color and thickness */
+    border: 2px solid var(--primary-color); /* Border color and thickness */
     border-radius: 50%; /* Makes the border circular */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    /* background: #FF3147; */
+    /* background: var(--primary-color); */
   }
 
 .item-back{
@@ -146,7 +152,7 @@ height:650px;
     position: absolute;
     top: 0px;
     left: 0;
-    background-color: #FF3147;
+    background-color: var(--primary-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -178,7 +184,7 @@ align-items: center;
 gap: 1rem;
 padding: 6px 8px; 
 background-color: #FAFAFA;
-color: #FF3147;
+color: var(--primary-color);
 border: none;
 border-radius: 2px;
 text-decoration: none;
@@ -222,7 +228,7 @@ font-weight: bolder;
 }
 
 .focus-style {
-    background-color: #FF3147;
+    background-color: var(--primary-color);
     color: #F6F6F6;
 }
 
@@ -277,7 +283,7 @@ font-weight: bolder;
 }
 
 .name{
-    color: #FF3147;
+    color: var(--primary-color);
     font-size: 22px;
     font-weight: 900;
     font-family: poppins;
@@ -288,7 +294,7 @@ font-weight: bolder;
 }
 
 footer{
-    background-color: #FF3147;
+    background-color: var(--primary-color);
 
 }
 
